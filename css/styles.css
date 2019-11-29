@@ -238,3 +238,34 @@ body{
     padding-bottom: 40px;
     width: 100%;
 }
+.items{
+    list-style: none;
+}
+.item{
+    height: 200px;
+    width: 200px;
+    border: 1px solid transparent;
+}
+.item .link{
+    text-align: center;
+background-color:
+#e74c3c;
+color:
+white;
+-webkit-box-shadow: -1px 6px 19px 0px rgba(191,159,165,0.91);
+-moz-box-shadow: -1px 6px 19px 0px rgba(191,159,165,0.91);
+box-shadow: -1px 6px 19px 0px
+rgba(191,159,165,0.91);
+padding: 5px 7px;
+border: none;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+.item img{
+    height: 100%;
+    width: 100%;
+}
+.item .link a{
+    color: white;
+    font-weight: 600;
+}
