@@ -214,3 +214,27 @@ body{
     position: fixed;
     top: 0;
 }
+.filter a{
+    color: #bdc3c7;
+    border: 1px solid #bdc3c7;
+    padding: 10px 18px;
+    display: block;
+}
+.filter li{
+    display: inline-block;
+    padding: 5px;
+}
+.filter .current{
+    background-color: #e74c3c;
+    border-color: #e74c3c;
+    color: #fff;
+}
+.filter{
+    text-align: center;
+    width: 100%;
+}
+.section .heading{
+    text-align: center;
+    padding-bottom: 40px;
+    width: 100%;
+}
