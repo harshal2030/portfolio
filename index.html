@@ -87,7 +87,8 @@
             part of my portfolio I have made my Jupyter notebooks available at bottom of page to download.
           </p>
           <p>
-            Every week a new Jupyter Notebook is uploaded. I would be glad if you can give me any suggestion for my code.
+            Every week a new Jupyter Notebook is uploaded. I would be glad if you can give me any suggestion for my
+            code.
           </p>
         </div>
       </div>
@@ -99,7 +100,7 @@
       <div class="row">
         <div class="col-md-12 text-center">
           <h2>TECHNICAL SKILLS</h2>
-          <p>A representation of my skills in each skill</p>
+          <p>Swipe left/right to see more.</p>
         </div>
         <div class="owl-carousel owl-theme">
           <div class="skill">
@@ -233,20 +234,132 @@
     </div>
   </div>
 
-  <div class="section resources" id="downloads">
-    <div class="col-md-12 text-center">
-      <p>Portfolio</p>
+  <div id="portfolio" class="section">
+    <div class="container">
+      <div class="row">
+        <div class="heading">
+          <h2>PORTFOLIO</h2>
+        </div>
+
+        <div class="filter">
+          <ul id="filters">
+            <li><button id="option" class="current option all">All</button></li>
+            <li><button id="option" class="option change">Data Analysis</button></li>
+            <li><button id="option" class="option">Me</button></li>
+            <li><button id="option" class="option">Website</button></li>
+          </ul>
+        </div>
+
+        <div class="itemsContainer">
+
+          <div class="item">
+            <img src="images/chem.jpg">
+
+            <div class="infoContainer">
+              <div class="top-left">
+                <h5>Analysis of Data</h5>
+              </div>
+              <div class="link">
+                <a href="#">Open Link</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="item not">
+            <img src="images/chem.jpg">
+
+            <div class="infoContainer">
+              <div class="top-left">
+                <h5>Analysis of Data</h5>
+              </div>
+              <div class="link">
+                <a href="#">Open Link</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="item not">
+            <img src="images/chem.jpg">
+
+            <div class="infoContainer">
+              <div class="top-left">
+                <h5>Analysis of Data</h5>
+              </div>
+              <div class="link">
+                <a href="#">Open Link</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="images/chem.jpg">
+
+            <div class="infoContainer">
+              <div class="top-left">
+                <h5>Analysis of Data</h5>
+              </div>
+              <div class="link">
+                <a href="#">Open Link</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="images/chem.jpg">
+
+            <div class="infoContainer">
+              <div class="top-left">
+                <h5>Analysis of Data</h5>
+              </div>
+              <div class="link">
+                <a href="#">Open Link</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="images/chem.jpg">
+
+            <div class="infoContainer">
+              <div class="top-left">
+                <h5>Analysis of Data</h5>
+              </div>
+              <div class="link">
+                <a href="#">Open Link</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="images/chem.jpg">
+
+            <div class="infoContainer">
+              <div class="top-left">
+                <h5>Analysis of Data</h5>
+              </div>
+              <div class="link">
+                <a href="#">Open Link</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="images/chem.jpg">
+
+            <div class="infoContainer">
+              <div class="top-left">
+                <h5>Analysis of Data</h5>
+              </div>
+              <div class="link">
+                <a href="#">Open Link</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
     </div>
-    <table class="resourceSection">
-      <tbody>
-        <tr class="head">
-          <td>Sno.</td>
-          <td>Project Name</td>
-          <td>Type</td>
-          <td>Download</td>
-        </tr>
-      </tbody>
-    </table>
   </div>
 
   <div class="copyrightSection">
@@ -254,6 +367,30 @@
       <p>&copy; Copyright Harshal Sanghvi</p>
     </div>
   </div>
+  <script>
+    $(document).ready(function(){
+      $("#filters").on("click", function(event){
+        if(event.target.id === "option") {
+          $(".option").each(function(){
+            $(this).removeClass("current");
+          })
+          var target = $(event.target);
+          target.addClass("current");
+          if(target.hasClass("change")){
+            $(".not").each(function(){
+              $(this).css("display", "none");
+            })
+          }
+          if(target.hasClass("all")){
+            $(".item").each(function(){
+              $(this).css("display", "block")
+            })
+          }
+        }
+      })
+
+    })
+  </script>
   <script src="js/script.js"></script>
 </body>
 

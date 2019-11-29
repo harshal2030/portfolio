@@ -4,7 +4,10 @@ body{
     letter-spacing: 1px;
     background-color: #fff;
 }
-
+@font-face{
+    font-family: satisfy;
+    src: url("../fonts/Satisfy-Regular.ttf");
+}
 .overlay {
     height: 100%;
     width: 100%;
@@ -213,4 +216,64 @@ body{
 .fixedNav #navigation{
     position: fixed;
     top: 0;
+}
+.filter .option{
+    border: 1px solid #bdc3c7;
+    padding: 10px 18px;
+    display: block;
+    cursor: pointer;
+}
+.filter .option:hover{
+    background-color: #e74c3c;
+    border-color: #e74c3c;
+    color: #fff;
+}
+.filter li{
+    display: inline-block;
+    padding: 5px;
+}
+.filter .current{
+    background-color: #e74c3c;
+    border-color: #e74c3c;
+    color: #fff;
+}
+.filter{
+    text-align: center;
+    width: 100%;
+}
+.section .heading{
+    text-align: center;
+    padding-bottom: 40px;
+    width: 100%;
+}
+.item .link{
+    text-align: center;
+}
+.item .link a{
+    color: #fff;
+}
+.infoContainer{
+    background-color: #e74c3c;
+    width: 160px;
+    border-bottom-left-radius: 5px;
+
+border-bottom-right-radius: 5px;
+}
+.top-left h5{
+    font-family: satisfy;
+    text-align: center;
+    color:white;
+}
+.link{
+    border-top: 1px solid #fff;
+    padding: 5px 0;
+}
+.itemsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+}
+.item{
+    padding: 10px;
 }
