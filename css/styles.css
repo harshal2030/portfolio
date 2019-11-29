@@ -217,11 +217,16 @@ body{
     position: fixed;
     top: 0;
 }
-.filter a{
-    color: #bdc3c7;
+.filter .option{
     border: 1px solid #bdc3c7;
     padding: 10px 18px;
     display: block;
+    cursor: pointer;
+}
+.filter .option:hover{
+    background-color: #e74c3c;
+    border-color: #e74c3c;
+    color: #fff;
 }
 .filter li{
     display: inline-block;
@@ -266,6 +271,8 @@ border-bottom-right-radius: 5px;
 .itemsContainer{
     display: flex;
     flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
 }
 .item{
     padding: 10px;

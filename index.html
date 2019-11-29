@@ -243,10 +243,10 @@
 
         <div class="filter">
           <ul id="filters">
-            <li><a href="#" class="current">All</a></li>
-            <li><a href="#">Data Analysis</a></li>
-            <li><a href="#">Me</a></li>
-            <li><a href="#">Website</a></li>
+            <li><button id="option" class="current option all">All</button></li>
+            <li><button id="option" class="option change">Data Analysis</button></li>
+            <li><button id="option" class="option">Me</button></li>
+            <li><button id="option" class="option">Website</button></li>
           </ul>
         </div>
 
@@ -265,7 +265,7 @@
             </div>
           </div>
 
-          <div class="item">
+          <div class="item not">
             <img src="images/chem.jpg">
 
             <div class="infoContainer">
@@ -278,7 +278,7 @@
             </div>
           </div>
 
-          <div class="item">
+          <div class="item not">
             <img src="images/chem.jpg">
 
             <div class="infoContainer">
@@ -367,6 +367,30 @@
       <p>&copy; Copyright Harshal Sanghvi</p>
     </div>
   </div>
+  <script>
+    $(document).ready(function(){
+      $("#filters").on("click", function(event){
+        if(event.target.id === "option") {
+          $(".option").each(function(){
+            $(this).removeClass("current");
+          })
+          var target = $(event.target);
+          target.addClass("current");
+          if(target.hasClass("change")){
+            $(".not").each(function(){
+              $(this).css("display", "none");
+            })
+          }
+          if(target.hasClass("all")){
+            $(".item").each(function(){
+              $(this).css("display", "block")
+            })
+          }
+        }
+      })
+
+    })
+  </script>
   <script src="js/script.js"></script>
 </body>
 
